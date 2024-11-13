@@ -1,0 +1,15 @@
+{
+  "name": "sock-simulator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && node ./dist/index.js",
+    "build": "rm -rf ./dist && tsc"
+  },
+  "author": "Steve Koontz",
+  "license": "ISC",
+  "dependencies": {
+    "uuid": "^11.0.3"
+  }
+}
