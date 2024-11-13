@@ -21,7 +21,7 @@ while (!drawer.socks.some(sock => sock.wearAmount >= 100)) {
   const rightSock = rightResult.removedSock
   drawer = rightResult.drawer
   
-  const wornSocks = wearSocks({ leftSock, rightSock })
+  const wornSocks = wearSocks(leftSock, rightSock)
   
   drawer = replaceSocks(drawer, wornSocks.leftSock, wornSocks.rightSock)
 }

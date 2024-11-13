@@ -1,8 +1,6 @@
 import { Sock } from '../types/sock'
 
-export const wearSocks = (pair: { leftSock: Sock, rightSock: Sock }): { leftSock: Sock, rightSock:Sock } => {
-  const { leftSock, rightSock } = pair
-  
+export const wearSocks = (leftSock: Sock, rightSock: Sock): { leftSock: Sock, rightSock:Sock } => {
   const wearAmount = Math.ceil(Math.random() * 3)
 
   leftSock.wearAmount += wearAmount
