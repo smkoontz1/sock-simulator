@@ -4,7 +4,8 @@ import { Drawer } from './types/drawer'
 
 let drawer: Drawer = { socks: [] }
 
-drawer = purchaseSocks(20, drawer)
+const numPairs = 20
+drawer = purchaseSocks(numPairs, drawer)
 
 let dayCount = 0
 
@@ -36,5 +37,17 @@ const orderedSockPairs = drawer.socks.sort((a, b) => {
   return 0
 })
 
+let totalWearDiff = 0
+
+for (let i = 0; i < orderedSockPairs.length; i += 2) {
+  const sock1 = orderedSockPairs[i]
+  const sock2 = orderedSockPairs[i + 1]
+
+  const wearDiff = Math.abs(sock1.wearAmount - sock2.wearAmount)
+  totalWearDiff += wearDiff
+  
+}
+
 console.log(`Took ${dayCount} days to reach 100% wear on one sock in the drawer`)
+console.log(`Average wear diff between pairs: ${totalWearDiff / numPairs}`)
 console.log(orderedSockPairs)
